@@ -196,6 +196,11 @@
 		4ADB29D4274E18BB00554A4E /* GetOffAlarmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADB29D3274E18BB00554A4E /* GetOffAlarmController.swift */; };
 		4ADB29D7274E198900554A4E /* GetOffAlarmInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADB29D6274E198900554A4E /* GetOffAlarmInteractor.swift */; };
 		4ADB29DA274E1A5F00554A4E /* GetOffAlarmStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADB29D9274E1A5F00554A4E /* GetOffAlarmStatus.swift */; };
+		4AE049CF2863358D0056749B /* LocalStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4AE049CD2863358D0056749B /* LocalStorage.xcdatamodeld */; };
+		4AE049E4286336E30056749B /* Station+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE049E0286336E30056749B /* Station+CoreDataClass.swift */; };
+		4AE049E5286336E30056749B /* Station+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE049E1286336E30056749B /* Station+CoreDataProperties.swift */; };
+		4AE049E6286336E30056749B /* BusRoute+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE049E2286336E30056749B /* BusRoute+CoreDataClass.swift */; };
+		4AE049E7286336E30056749B /* BusRoute+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE049E3286336E30056749B /* BusRoute+CoreDataProperties.swift */; };
 		4AF1E0602755BE2400DE51C8 /* NavigatableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF1E05F2755BE2400DE51C8 /* NavigatableView.swift */; };
 		4AF1E0682756262300DE51C8 /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF1E0672756262300DE51C8 /* NetworkServiceTests.swift */; };
 		4AF1E0752756263400DE51C8 /* PersistenceStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF1E0742756263400DE51C8 /* PersistenceStorageTests.swift */; };
@@ -507,6 +512,11 @@
 		4ADB29D3274E18BB00554A4E /* GetOffAlarmController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetOffAlarmController.swift; sourceTree = "<group>"; };
 		4ADB29D6274E198900554A4E /* GetOffAlarmInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetOffAlarmInteractor.swift; sourceTree = "<group>"; };
 		4ADB29D9274E1A5F00554A4E /* GetOffAlarmStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetOffAlarmStatus.swift; sourceTree = "<group>"; };
+		4AE049CE2863358D0056749B /* LocalStorage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LocalStorage.xcdatamodel; sourceTree = "<group>"; };
+		4AE049E0286336E30056749B /* Station+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Station+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4AE049E1286336E30056749B /* Station+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Station+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4AE049E2286336E30056749B /* BusRoute+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BusRoute+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4AE049E3286336E30056749B /* BusRoute+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BusRoute+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4AF1E05F2755BE2400DE51C8 /* NavigatableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatableView.swift; sourceTree = "<group>"; };
 		4AF1E0652756262300DE51C8 /* NetworkServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AF1E0672756262300DE51C8 /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
@@ -696,8 +706,13 @@
 		049375A4273B9C970061ACDA /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				4AE049E0286336E30056749B /* Station+CoreDataClass.swift */,
+				4AE049E1286336E30056749B /* Station+CoreDataProperties.swift */,
+				4AE049E2286336E30056749B /* BusRoute+CoreDataClass.swift */,
+				4AE049E3286336E30056749B /* BusRoute+CoreDataProperties.swift */,
 				049375A5273B9CB60061ACDA /* BusRouteList.json */,
 				049375A7273B9CD60061ACDA /* StationList.json */,
+				4AE049CD2863358D0056749B /* LocalStorage.xcdatamodeld */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -1993,6 +2008,7 @@
 				4AF1E0602755BE2400DE51C8 /* NavigatableView.swift in Sources */,
 				4ADB29C9274B7AA200554A4E /* GetOnAlarmAPIUseCase.swift in Sources */,
 				0446843B275677CA007E440A /* MovingStatusCalculatable.swift in Sources */,
+				4AE049E7286336E30056749B /* BusRoute+CoreDataProperties.swift in Sources */,
 				0476ABBD27311C1600F72DD1 /* BusStationTableViewCell.swift in Sources */,
 				4A38E20727463FF7003A9D10 /* BBusAPIError.swift in Sources */,
 				4A5182C127551F6D001EA530 /* DeleteFavoriteItemUsable.swift in Sources */,
@@ -2001,6 +2017,7 @@
 				0446843527567769007E440A /* AlarmSettingAPIUsable.swift in Sources */,
 				4ADB29CF274B890800554A4E /* BusApproachStatus.swift in Sources */,
 				0476ABBB27310ED200F72DD1 /* BusRouteHeaderView.swift in Sources */,
+				4AE049E5286336E30056749B /* Station+CoreDataProperties.swift in Sources */,
 				875F1AB22755BE08003F5BB1 /* AlarmSettingCalculateUseCase.swift in Sources */,
 				04468427275675F1007E440A /* SearchAPIUsable.swift in Sources */,
 				4AA294B7273C1275008E5497 /* DeleteFavoriteItemFetchable.swift in Sources */,
@@ -2103,6 +2120,7 @@
 				4A5182A627550988001EA530 /* RequestFactory.swift in Sources */,
 				4ACA5209272FCE5A00EC0531 /* BusRouteAPIUseCase.swift in Sources */,
 				0446842F275676B3007E440A /* BusRouteAPIUsable.swift in Sources */,
+				4AE049CF2863358D0056749B /* LocalStorage.xcdatamodeld in Sources */,
 				4A5100372755106A00754B36 /* HomeCalculateUseCase.swift in Sources */,
 				4AA294B1273C1094008E5497 /* GetStationListFetcher.swift in Sources */,
 				4ACA5233272FCF0F00EC0531 /* SearchViewController.swift in Sources */,
@@ -2112,6 +2130,7 @@
 				4A412028274E34430083D691 /* BusRouteModel.swift in Sources */,
 				87A5556C2728116400A9B5E3 /* AppDelegate.swift in Sources */,
 				4A5182A8275511D5001EA530 /* ServiceFetchable.swift in Sources */,
+				4AE049E6286336E30056749B /* BusRoute+CoreDataClass.swift in Sources */,
 				4A5100352754CE1500754B36 /* BaseViewController.swift in Sources */,
 				87038A90273C11630078EAE3 /* GetStationsByRouteListFetcher.swift in Sources */,
 				4ACA522B272FCED600EC0531 /* MovingStatusModel.swift in Sources */,
@@ -2129,6 +2148,7 @@
 				87359B8D27311BF100F461A7 /* BusTagView.swift in Sources */,
 				4A3B6C502755DF2400BBC498 /* AlarmCenter.swift in Sources */,
 				4A17CED72733A754007B1646 /* SimpleCollectionHeaderView.swift in Sources */,
+				4AE049E4286336E30056749B /* Station+CoreDataClass.swift in Sources */,
 				047C30FE273A05A60075EA14 /* BBusRouteType.swift in Sources */,
 				4ACA51E5272FCD9C00EC0531 /* HomeAPIUseCase.swift in Sources */,
 				4ACA51E5272FCD9C00EC0531 /* HomeAPIUseCase.swift in Sources */,
@@ -3042,6 +3062,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4AE049CD2863358D0056749B /* LocalStorage.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4AE049CE2863358D0056749B /* LocalStorage.xcdatamodel */,
+			);
+			currentVersion = 4AE049CE2863358D0056749B /* LocalStorage.xcdatamodel */;
+			path = LocalStorage.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 87A555602728116400A9B5E3 /* Project object */;
 }

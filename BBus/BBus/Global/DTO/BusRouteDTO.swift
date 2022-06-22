@@ -15,7 +15,7 @@ struct BusRouteDTO: Codable {
     let endStation: String
 }
 
-enum RouteType: String, Codable {
+public enum RouteType: String, Codable {
     case mainLine = "간선"
     case broadArea = "광역"
     case customized = "맞춤"

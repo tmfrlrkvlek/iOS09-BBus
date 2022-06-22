@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="BusRouteList" representedClassName="BusRouteList" syncable="YES">
+        <attribute name="busRouteName" optional="YES" attributeType="String"/>
+        <attribute name="endStation" optional="YES" attributeType="String"/>
+        <attribute name="routeID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="routeStringType" optional="YES" attributeType="String" customClassName="RouteType"/>
+        <attribute name="startStation" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="StationList" representedClassName="StationList" syncable="YES">
+        <attribute name="arsId" optional="YES" attributeType="String"/>
+        <attribute name="stationId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="stationName" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="BusRouteList" positionX="-54" positionY="-9" width="128" height="104"/>
+        <element name="StationList" positionX="-27" positionY="54" width="128" height="74"/>
+    </elements>
+</model>
