@@ -8,11 +8,11 @@
 import Foundation
 
 protocol Requestable {
-    func request(url: String, accessKey: String, params: [String: String]) -> URLRequest?
+    static func request(url: String, accessKey: String, params: [String: String]) -> URLRequest?
 }
 
-struct RequestFactory: Requestable {
-    func request(url: String, accessKey: String, params: [String: String]) -> URLRequest? {
+enum RequestFactory: Requestable {
+    static func request(url: String, accessKey: String, params: [String: String]) -> URLRequest? {
         guard var components = URLComponents(string: url) else { return nil }
         var items: [URLQueryItem] = []
         params.forEach() { item in
