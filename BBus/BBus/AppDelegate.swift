@@ -24,8 +24,13 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         UNUserNotificationCenter.current().delegate = self
-        if let data =  try? self.persistentContainer.viewContext.fetch(Station.fetchRequest()) {
-            print(data.count)
+        let request = Station.fetchRequest()
+        request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [NSPredicate(format: "stationID LIKE %@", "100000014")])
+        if let data =  try? self.persistentContainer.viewContext.fetch(request) {
+            data.forEach({ item in
+                print(item.stationID)
+                print(item.stationName)
+            })
         }
         return true
     }
@@ -35,7 +40,6 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.
         // Use this method to select a configuration to create the new scene with.
-        
         
 //        let resource: String? = "BusRouteList"
 //        let type: String? = "json"

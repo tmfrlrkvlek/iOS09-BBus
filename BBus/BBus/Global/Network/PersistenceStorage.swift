@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import CoreData
 
 protocol PersistenceStorageProtocol {
     func create<T: Codable>(key: String, param: T) -> AnyPublisher<Data, Error>
@@ -16,6 +17,15 @@ protocol PersistenceStorageProtocol {
 }
 
 struct PersistenceStorage: PersistenceStorageProtocol {
+    
+    private static var container: NSPersistentContainer = {
+        let container = NSPersistentContainer(name: "LocalStorage")
+        container.loadPersistentStores(completionHandler: { (storeDecription, error) in
+            guard let error = error else { return }
+            print("재접속해주세요")
+        })
+        return container
+    }()
     
     private enum PersistenceError: Error {
         case noneError, decodingError, encodingError, urlError
@@ -78,6 +88,23 @@ struct PersistenceStorage: PersistenceStorageProtocol {
                 publisher?.send(data)
             } else {
                 publisher?.send(completion: .failure(PersistenceError.noneError))
+            }
+        }
+        return publisher.compactMap({$0}).eraseToAnyPublisher()
+    }
+    
+    func get(entity: NSManagedObject.Type, param: [String: String]) -> AnyPublisher<[NSFetchRequestResult], Error> {
+        let publisher = CurrentValueSubject<[NSFetchRequestResult]?, Error>(nil)
+        DispatchQueue.global().async { [weak publisher] in
+            let request = entity.fetchRequest()
+            request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: param.map { key, value in
+                    NSPredicate(format: "\(key) LIKE %@", value)
+                })
+            do {
+                let data = try Self.container.viewContext.fetch(request)
+                publisher?.send(data)
+            } catch {
+                publisher?.send(completion: .failure(error))
             }
         }
         return publisher.compactMap({$0}).eraseToAnyPublisher()
